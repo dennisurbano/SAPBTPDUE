@@ -1,0 +1,45 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+    typeName: 'Cliente',
+    typeNamePlural: 'Clientes',
+    typeImageUrl: '',
+    imageUrl: 'Url',
+    title: {
+        type: #STANDARD,
+        label: '',
+        iconUrl: '',
+        criticality: '',
+        criticalityRepresentation: #WITHOUT_ICON,
+        value: 'Nombre',
+        valueQualifier: '',
+        targetElement: '',
+        url: ''
+    },
+    description: {
+        type: #STANDARD,
+        label: '',
+        iconUrl: '',
+        criticality: '',
+        criticalityRepresentation: #WITHOUT_ICON,
+        value: 'IdCliente',
+        valueQualifier: '',
+        targetElement: '',
+        url: ''
+    }
+}
+annotate entity Z_B_CLIENTE with
+{
+  @UI.connectedFields: [{ hidden: true }]
+  IdCliente;
+  @UI.connectedFields: [{ hidden: true }]
+  TipoAcceso;
+  @UI.connectedFields: [{ hidden: true }]
+  Nombre;
+  @UI.connectedFields: [{ hidden: true }]
+  Apellidos;
+  @UI.connectedFields: [{ hidden: true }]
+  Email;
+  @UI.connectedFields: [{ hidden: true }]
+  Url;
+
+}

@@ -1,0 +1,65 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+    typeName: 'Libro',
+    typeNamePlural: 'Libros',
+    typeImageUrl: '',
+    imageUrl: 'ImagenLibro',
+    title: {
+        type: #STANDARD,
+        label: '',
+        iconUrl: '',
+        criticality: '',
+        criticalityRepresentation: #WITHOUT_ICON,
+        value: 'Autor',
+        valueQualifier: '',
+        targetElement: '',
+        url: ''
+    },
+    description: {
+        type: #STANDARD,
+        label: '',
+        iconUrl: '',
+        criticality: '',
+        criticalityRepresentation: #WITHOUT_ICON,
+        value: 'Titulo',
+        valueQualifier: '',
+        targetElement: '',
+        url: ''
+    }
+}
+@Search.searchable: true
+annotate entity Z_B_LIBROS with
+{
+  @UI.connectedFields: [{ hidden: true }]
+  IdLibro;
+  @UI.lineItem: [{ position: 20 }]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'Z_B_CATEGORIA', element: 'BiCateg' }}]
+  @UI.selectionField: [{ position: 10 }]
+  BiCateg;
+  @UI.lineItem: [{ position: 30 }]
+  @UI.selectionField: [{ position: 20 }]
+  Titulo;
+  @UI.lineItem: [{ position: 40 }]
+  Autor;
+  @UI.lineItem: [{ position: 50 }]
+  @Search: {
+      defaultSearchElement: true,
+      ranking: #MEDIUM,
+      fuzzinessThreshold: 0.8
+  }
+  Editorial;
+  @UI.lineItem: [{ position: 60 }]
+  Idioma;
+  @UI.lineItem: [{ position: 70 }]
+  Paginas;
+  @UI.lineItem: [{ position: 80 }]
+  Precio;
+  @UI.lineItem: [{ position: 90 }]
+  Moneda;
+  @UI.lineItem: [{ position: 100 }]
+  Formato;
+  @UI.connectedFields: [{ hidden: true }]
+  ImagenLibro;
+  @UI.lineItem: [{ position: 110, criticality: 'Ventas'}]
+  Ventas;
+}
