@@ -72,10 +72,10 @@ CLASS zcl_library_loading_data IMPLEMENTATION.
 
 ** Clientes **
     lt_cliente_2017 = VALUE #(
-    ( id_cliente = 'C000000001' tipo_acceso = 'X' nombre = 'Dennis' apellidos = 'Urbano Eusebio' email = 'dnnisurb@gmail.com' url = 'www.google.com' )
-    ( id_cliente = 'C000000002' tipo_acceso = 'X' nombre = 'Pepe' apellidos = 'Perez' email = 'pperez@gmail.com' url = 'www.google.com' )
-    ( id_cliente = 'C000000003' tipo_acceso = 'X' nombre = 'Maria' apellidos = 'Carpio' email = 'mcarpio@gmail.com' url = 'www.google.com' )
-    ( id_cliente = 'C000000004' tipo_acceso = 'X' nombre = 'Josefina' apellidos = 'Quijada' email = 'jquijada@gmail.com' url = 'www.google.com' )
+    ( id_cliente = 'C000000001' tipo_acceso = 'X' nombre = 'Jorge' apellidos = 'Urquía' email = 'jurquia@gmail.com' url = 'https://img.freepik.com/vector-premium/hombre-dibujos-animados-sonrisa-cara_481747-100562.jpg' )
+    ( id_cliente = 'C000000002' tipo_acceso = 'X' nombre = 'Pepe' apellidos = 'Perez' email = 'pperez@gmail.com' url = 'https://img.freepik.com/vector-gratis/ilustracion-caricatura-dibujada-mano_23-2149831816.jpg' )
+    ( id_cliente = 'C000000003' tipo_acceso = 'X' nombre = 'Maria' apellidos = 'Carpio' email = 'mcarpio@gmail.com' url = 'https://img.freepik.com/vector-gratis/retrato-mujer-profesional-medica_1308-172080.jpg' )
+    ( id_cliente = 'C000000004' tipo_acceso = 'X' nombre = 'Josefina' apellidos = 'Quijada' email = 'jquijada@gmail.com' url = 'https://img.freepik.com/vector-premium/icono-cara-mujer-vector-plano_1120558-37359.jpg?semt=ais_hybrid' )
     ).
 
     DELETE FROM ztb_cliente_2017.

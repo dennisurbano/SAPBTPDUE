@@ -21,7 +21,7 @@
         iconUrl: '',
         criticality: '',
         criticalityRepresentation: #WITHOUT_ICON,
-        value: 'IdCliente',
+        value: 'Email',
         valueQualifier: '',
         targetElement: '',
         url: ''
@@ -29,17 +29,26 @@
 }
 annotate entity Z_B_CLIENTE with
 {
-  @UI.connectedFields: [{ hidden: true }]
+
+  @UI.facet: [{ id: 'DetalleCliente', label: 'Detalles del Cliente', type: #COLLECTION, position: 10 },
+              { id: 'Cliente', parentId: 'DetalleCliente', label: 'Cliente Detalle', type: #FIELDGROUP_REFERENCE,
+                    targetQualifier: 'DetalleCliente', position: 10 }
+             ]
+
+  @UI.fieldGroup: [{ qualifier: 'DetalleCliente'}]
   IdCliente;
-  @UI.connectedFields: [{ hidden: true }]
+  @UI.fieldGroup: [{ qualifier: 'DetalleCliente'}]
   TipoAcceso;
-  @UI.connectedFields: [{ hidden: true }]
+  @UI.lineItem: [{ position: 30 }]
+  @UI.fieldGroup: [{ qualifier: 'DetalleCliente'}]
   Nombre;
-  @UI.connectedFields: [{ hidden: true }]
+  @UI.lineItem: [{ position: 40 }]
+  @UI.fieldGroup: [{ qualifier: 'DetalleCliente'}]
   Apellidos;
-  @UI.connectedFields: [{ hidden: true }]
+  @UI.lineItem: [{ position: 50 }]
+  @UI.fieldGroup: [{ qualifier: 'DetalleCliente'}]
   Email;
-  @UI.connectedFields: [{ hidden: true }]
+  @UI.adaptationHidden: true
   Url;
 
 }
